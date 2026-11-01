@@ -1,5 +1,6 @@
 # Day 01 — Getting Started with Burp Suite & Web Security
 
+**Author:** Harsh Dwivedi
 **Learning Track:** Bug Bounty Hunting  
 **Topics:** Burp Suite • HTTP Fundamentals • Proxy Configuration • Sessions • Authorization Testing
 
