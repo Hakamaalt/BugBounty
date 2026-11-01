@@ -333,26 +333,6 @@ After completing this session, these are the main concepts I want to remember:
 
 ---
 
-## Personal Notes & Revision
-
-**What I understood well:**
-
-_Write my own observations here._
-
-**What I need to practice again:**
-
-_Add topics that need more attention._
-
-**Questions from today's class:**
-
-_Record doubts and questions._
-
-**My practical observations:**
-
-_Add screenshots, sanitized HTTP captures and lab notes._
-
----
 
 **Session Status:** Day 01 Completed
 
-**Next Learning Focus:** Understanding web reconnaissance and identifying application attack surfaces.
