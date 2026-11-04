@@ -11,9 +11,7 @@ Email OTP Verification Bypass
 
 ## Summary
 
-While assessing the TaskBear user registration functionality, an issue was identified in the email OTP verification process. During testing with Burp Suite, the unsuccessful OTP verification response (`401 Unauthorized`) was manually replaced with a previously recorded successful response (`201 Created`).
-Following this modification, the client-side registration workflow continued as though the email verification had been completed successfully. After submitting the remaining registration details, the application displayed an account creation confirmation and redirected to the user dashboard.
-This observation suggests that the frontend may be relying on the HTTP response status to determine the outcome of OTP verification. However, additional validation is necessary to confirm whether the backend independently checks the verification status before creating or activating an account, and whether an unverified account can retain normal access.
+During testing of TaskBear's registration process, an OTP verification bypass was observed using Burp Suite. By replacing the failed `401 Unauthorized` response with a previously captured `201 Created` response, the registration workflow proceeded successfully, displaying an account creation message and granting dashboard access. This suggests that OTP verification may rely on client-side response handling, although backend enforcement requires further investigation.
 
 ## Affected Asset
 
