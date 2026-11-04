@@ -36,44 +36,44 @@ This observation suggests that the frontend may be relying on the HTTP response 
 
 **Description:** Displays the TaskBear sign-up interface, including the registration fields provided to new users during the account creation process.
 
-<img width="922" height="901" alt="image" src="https://github.com/user-attachments/assets/066ff85a-c76f-48f0-8d11-3399b291e5cf" />
-
+<img width="800" height="717" alt="Screenshot 2026-11-04 224517" src="https://github.com/user-attachments/assets/8a6534c5-8554-4ee7-906e-a55bf3097d08" />
 
 ### Screenshot 2: Successful Email OTP Verification Response
 
 **Description:** Shows the HTTP response intercepted through Burp Suite Proxy after submitting a valid email verification OTP. This response serves as a reference for the successful verification scenario.
 
-<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/c274e9a4-112f-4228-8fe6-b1ab7ba7f99e" />
+<img width="1920" height="1200" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/5f83d63d-0887-4a14-843d-e4a78d04cc41" />
+
 
 ### Screenshot 3: OTP Verification Request Using an Invalid Code
 
 **Description:** Illustrates the intercepted OTP verification request in Burp Suite Proxy. The request contains the target email address along with an intentionally incorrect OTP value.
 
-<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/8c3473c4-298f-456c-baf0-3ec082e5ad56" />
+<img width="1920" height="1200" alt="Screenshot (6)" src="https://github.com/user-attachments/assets/ff076b3c-803c-4c79-a38e-5b049a0cf1e3" />
 
 ### Screenshot 4: HTTP Response for an Incorrect OTP
 
 **Description:** Presents the server response received after submitting an invalid OTP (`123456`). The response indicates that the email verification attempt was unsuccessful.
 
-<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/ac594719-0a7a-421d-9de4-02034846c160" />
+<img width="951" height="1198" alt="Screenshot 2026-11-04 225322" src="https://github.com/user-attachments/assets/c50c28ba-37d5-4567-ad09-f3bce6720c26" />
 
 ### Screenshot 5: Modification of the OTP Verification Response
 
 **Description:** Shows the Burp Suite response editor where the unsuccessful OTP verification response was manually modified to replicate the previously captured successful HTTP response.
 
-<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/f3c54456-6ee9-470e-86fa-6db6ffcd4c5d" />
+<img width="1722" height="913" alt="image" src="https://github.com/user-attachments/assets/776fedb8-a58c-464f-81ab-d3c06794eabb" />
 
 ### Screenshot 6: Registration Details Submitted After the Bypass Attempt
 
 **Description:** Displays the registration form filled with the necessary user information, including first name, last name, email address, mobile number, date of birth, and password, following the OTP response modification.
 
-<img width="683" height="897" alt="image" src="https://github.com/user-attachments/assets/f8ebb912-0845-4555-ad8e-29fc8535b102" />
+<img width="661" height="1002" alt="image" src="https://github.com/user-attachments/assets/2136134b-6e14-47be-bc0e-fec5ff67d72b" />
 
 ### Screenshot 7: Dashboard Access Following the OTP Bypass Attempt
 
 **Description:** Shows the TaskBear user dashboard displayed after submitting the registration details, indicating that the frontend registration workflow proceeded to the account creation success state despite the invalid OTP verification attempt.
 
-<img width="1777" height="892" alt="image" src="https://github.com/user-attachments/assets/933c73a5-df61-48a6-a240-52737b10a7de" />
+<img width="1437" height="716" alt="image" src="https://github.com/user-attachments/assets/543e7694-7ff2-4123-ba0d-eeee8f6f0857" />
 
 ## Impact
 
