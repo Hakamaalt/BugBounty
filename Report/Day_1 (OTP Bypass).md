@@ -3,7 +3,7 @@
 **Severity**
 Medium
 
-**OWASP Top 10:**2025
+**OWASP Top 10:** 2025
 A07 – Authentication Failures
 
 **Vulnerability Type**
@@ -36,6 +36,7 @@ This observation suggests that the frontend may be relying on the HTTP response 
 
 **Description:** Displays the TaskBear sign-up interface, including the registration fields provided to new users during the account creation process.
 
+<img width="922" height="901" alt="image" src="https://github.com/user-attachments/assets/066ff85a-c76f-48f0-8d11-3399b291e5cf" />
 
 
 ### Screenshot 2: Successful Email OTP Verification Response
