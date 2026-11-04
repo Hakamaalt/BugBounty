@@ -37,6 +37,7 @@ This observation suggests that the frontend may be relying on the HTTP response 
 **Description:** Displays the TaskBear sign-up interface, including the registration fields provided to new users during the account creation process.
 
 
+
 ### Screenshot 2: Successful Email OTP Verification Response
 
 **Description:** Shows the HTTP response intercepted through Burp Suite Proxy after submitting a valid email verification OTP. This response serves as a reference for the successful verification scenario.
