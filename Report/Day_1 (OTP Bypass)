@@ -1,1 +1,54 @@
+OTP Verification Bypass via Response Handling
+Vulnerability Type
+Email OTP Verification / Authentication Workflow Issue
 
+Summary
+During TaskBear registration testing, Burp Suite captured 201 Created responses for OTP submissions, including an incorrect OTP (123456). The registration process proceeded to the next step. Server-side OTP validation still requires confirmation.
+
+Vulnerable Endpoint
+POST https://[REDACTED_API_HOST]/api/v1/uwa/auth/otp/verify
+
+Steps to Reproduce
+Open the TaskBear registration page and start registration using a temporary email address.
+Submit the OTP and capture the verification request and successful response using Burp Suite.
+Start a new registration using another controlled email address and proceed to the OTP verification page.
+Submit an incorrect OTP (123456) and capture the verification request and response in Burp Suite.
+Compare the captured responses and inspect the verification status and response body. Document any response manipulation performed during authorized testing.
+Forward the response and observe whether the application proceeds to the registration details page and subsequent onboarding process.
+Payload / Response Observed
+The captured response contained the following structure:
+
+HTTP/2 201 Created
+Content-Type: application/json; charset=utf-8
+X-Powered-By: Express
+X-Ratelimit-Limit: 10
+X-Ratelimit-Remaining: 9
+
+{
+  "contact": "[REDACTED_EMAIL]",
+  "verifiedAt": "[REDACTED_TIMESTAMP]"
+}
+Proof of Concept (PoC)
+Screenshot 1: OTP Verification Request
+image
+Screenshot 2: OTP Verification Response
+image
+Screenshot 3: Second OTP Verification Request
+image
+Screenshot 4: Response to Second Verification Request
+image
+Screenshot 5: Registration Page
+image
+Screenshot 7: Onboarding Page
+image
+Impact
+The registration workflow proceeded after the OTP verification requests.
+Email verification enforcement may be affected.
+If the backend accepts an invalid OTP, users may be able to register without proving ownership of their email address.
+Recommendation for Fix
+Validate OTPs on the server before accepting verification.
+Do not rely on client-side response handling for authentication decisions.
+Maintain verification status on the server.
+Bind OTPs to the correct email address and registration session.
+Enforce OTP expiration and single-use restrictions.
+Apply rate limits to OTP verification attempts.
